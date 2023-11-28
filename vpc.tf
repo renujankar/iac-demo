@@ -1,9 +1,7 @@
-resource "aws_vpc" "main" {
-  cidr_block       = "10.1.0.0/16"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "demo-vpc"
-    Purpose = "Jenkins Demo"
-  }
+resource "aws_vpc" "my-vpc" {
+ cidr_block = "10.0.0.0/16"
+ 
+ tags = {
+   Name = "Project VPC"
+ }
 }
