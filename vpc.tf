@@ -1,13 +1,9 @@
-provider "aws" {
-  region = "ap-south-1"  # Change this to your desired region
-}
-
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/16"
-  enable_dns_support = true
-  enable_dns_hostnames = true
+resource "aws_vpc" "main" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
 
   tags = {
-    Name = "example-vpc"
+    Name = "demo-vpc"
+    Purpose = "Jenkins Demo"
   }
 }
